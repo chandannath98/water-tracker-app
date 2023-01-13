@@ -52,23 +52,7 @@ function TabBarIcon({ ...props }) {
   return <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />;
 }
 
-const TabOneStack = createStackNavigator();
 
-function TabOneNavigator() {
-  return (
-    <TabOneStack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <TabOneStack.Screen
-        name="TabOneScreen"
-        component={FavoriteStretchStack}
-        options={{ headerTitle: "Tab One Title" }}
-      />
-    </TabOneStack.Navigator>
-  );
-}
 
 const TabTwoStack = createStackNavigator();
 

@@ -35,6 +35,11 @@
       },
       "permissions": [],
       "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "afdc3357-8924-41e5-8126-ed86abc50d2f"
+      }
     }
   }
 }

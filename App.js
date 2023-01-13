@@ -6,12 +6,13 @@ import * as Font from 'expo-font';
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { Provider } from 'react-redux';
-import { AppLoading } from 'expo';
+import AppLoading from 'expo-app-loading'
 import ReduxThunk from 'redux-thunk';
 import Navigation from "./navigation";
 
-import TabNavigator from './navigation/screen-navigation';
+
 import waterReducer from './store/water-reducer';
+
 
 const rootReducer = combineReducers({
   water: waterReducer
@@ -34,17 +35,17 @@ export default function App() {
       <AppLoading
         startAsync={fetchFonts}
         onFinish={() => setFontLoaded(true)}
+        onError={()=>console.log("error")}
       />
     );
   }
 
   return (
-    // <Provider store={store}>
-    //   <TabNavigator />
-    // </Provider>
+ 
     <Provider store={store}>
       <SafeAreaProvider>
         <Navigation />
+        
         <StatusBar />
       </SafeAreaProvider>
     </Provider>
